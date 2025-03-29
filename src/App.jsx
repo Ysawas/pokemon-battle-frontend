@@ -7,7 +7,6 @@ import './index.css';
 function App() {
   return (
     <RosterProvider>
-      <Navbar />
       <AppRoutes />
     </RosterProvider>
   );

@@ -5,10 +5,11 @@ import PokemonDetailsRouter from './routers/PokemonDetailsRouter';
 import MyRosterRouter from './routers/MyRosterRouter';
 import BattleRouter from './routers/BattleRouter';
 import LeaderboardRouter from './routers/LeaderboardRouter';
-
+import Navbar from './components/common/Navbar';
 const AppRoutes = () => {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomeRouter />} />
         <Route path="/pokemon/:id" element={<PokemonDetailsRouter />} />
