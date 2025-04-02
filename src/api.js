@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-const POKE_API_URL = import.meta.env.VITE_POKE_API_URL;
+const POKEAPI_URL = import.meta.env.VITE_POKE_API_URL;
 
 /**
  * Handles API errors and logs them for debugging.
@@ -61,19 +61,19 @@ export const deleteScore = async (id) => {
   }
 };
 
-export const fetchPokemonList = async (limit = 20) => {
+export const fetchPokemonList = async (limit = 30, offset = 0) => {
   try {
-    const response = await axios.get(`${POKE_API_URL}/pokemon?limit=${limit}`);
-    return response.data.results;
+    const response = await axios.get(`${POKEAPI_URL}/pokemon?limit=${limit}&offset=${offset}`);
+    return response.data;
   } catch (error) {
     console.error('Error fetching Pokémon list:', error);
-    return [];
+    return null;
   }
 };
 
 export const fetchPokemonDetails = async (id) => {
   try {
-    const response = await axios.get(`${POKE_API_URL}/pokemon/${id}`);
+    const response = await axios.get(`${POKEAPI_URL}/pokemon/${id}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching Pokémon details:', error);
