@@ -35,3 +35,5 @@ export const removeLeaderboardScore = async (id) => {
     return null;
   }
 };
+
+export { createScore }; // Make sure createScore is exported

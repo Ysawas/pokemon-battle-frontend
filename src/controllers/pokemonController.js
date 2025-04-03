@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const POKEAPI_URL = import.meta.env.VITE_POKE_API_URL;
+const POKEAPI_URL = 'https://pokeapi.co/api/v2';
 
 export const fetchPokemonList = async (limit = 30, offset = 0) => {
   try {
