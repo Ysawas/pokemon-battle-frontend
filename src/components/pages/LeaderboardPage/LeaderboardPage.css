@@ -1,0 +1,80 @@
+/* src/components/pages/LeaderboardPage/LeaderboardPage.css */
+
+.leaderboard-page-container {
+    background-color: #222; /* Dark background */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .leaderboard-main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .score-submission-box {
+    background-color: white;
+    color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .score-submission-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .score-submission-box button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .score-submission-box button:hover {
+    background-color: #0056b3;
+  }
+  
+  .leaderboard-table-container {
+    background-color: white;
+    color: #222;
+    padding: 15px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .leaderboard-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .leaderboard-table tbody tr:last-child td {
+    border-bottom: none;
+  }
